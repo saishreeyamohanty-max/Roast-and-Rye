@@ -1,0 +1,301 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Roast &amp; Rye – Coffee, Comfort &amp; Conversations</title>
+  <meta name="description" content="Roast &amp; Rye: freshly brewed coffee, fresh bakes and all-day meals. A Little Coffee. A Lot of Comfort.">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,500;9..144,700&family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="cafe.css">
+</head>
+<body>
+
+  <!-- ============ NAVIGATION ============ -->
+  <header class="site-header" id="siteHeader">
+    <nav class="nav container">
+      <a href="#home" class="logo">Roast &amp; Rye</a>
+
+      <ul class="nav-links" id="navLinks">
+        <li><a href="#home">Home</a></li>
+        <li><a href="#story">Our Story</a></li>
+        <li><a href="#menu">Menu</a></li>
+        <li><a href="#specials">Specials</a></li>
+        <li><a href="#gallery">Gallery</a></li>
+        <li><a href="#contact">Contact</a></li>
+      </ul>
+
+      <div class="nav-actions">
+        <button class="cart-btn" id="cartBtn" aria-label="Open cart">
+          <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M3 4h2l2.4 11.2a1 1 0 0 0 1 .8h8.9a1 1 0 0 0 1-.8L20 8H6"/><circle cx="9.5" cy="20" r="1.3"/><circle cx="17" cy="20" r="1.3"/></svg>
+          <span class="cart-count" id="cartCount">0</span>
+        </button>
+        <a href="#menu" class="btn btn-primary btn-sm order-now">Order Now</a>
+        <button class="hamburger" id="menuToggle" aria-label="Toggle menu" aria-expanded="false">
+          <span></span><span></span><span></span>
+        </button>
+      </div>
+    </nav>
+  </header>
+
+  <main>
+    <!-- ============ HERO ============ -->
+    <section class="hero" id="home">
+      <div class="container hero-grid">
+        <div class="hero-text">
+          <p class="tagline">A Little Coffee. A Lot of Comfort.</p>
+          <h1>Good Coffee. Great Food. Better Moments.</h1>
+          <p class="lead">Roast &amp; Rye is a neighbourhood café built around slow mornings, long conversations and cups poured with care. Come for the coffee, stay for the croissants.</p>
+          <div class="hero-buttons">
+            <a href="#menu" class="btn btn-primary">Explore Our Menu</a>
+            <a href="#specials" class="btn btn-outline">Order Your Favourites</a>
+          </div>
+          <div class="hero-info">
+            <div><strong>Open daily</strong><span>8:00 AM – 11:00 PM</span></div>
+            <div><strong>Featured drink</strong><span>Caramel Frappe</span></div>
+          </div>
+        </div>
+        <div class="hero-image">
+          <img src="https://images.unsplash.com/photo-1495474472287-4d71bcdd2085?auto=format&fit=crop&w=1000&q=75" alt="A cup of latte beside fresh pastries on a wooden table">
+        </div>
+      </div>
+    </section>
+
+    <!-- ============ OUR STORY ============ -->
+    <section class="story" id="story">
+      <div class="container story-grid">
+        <img src="https://images.unsplash.com/photo-1554118811-1e0d58224f24?auto=format&fit=crop&w=1000&q=75" alt="Warm, cosy café interior with wooden tables" class="story-img">
+        <div>
+          <h2>Coffee, comfort and conversations</h2>
+          <p>Roast &amp; Rye began with a simple idea: a café should feel like the best seat in your favourite friend's home. We brew every cup fresh from carefully roasted beans, and we prepare our food in-house each morning.</p>
+          <ul class="features">
+            <li><h3>Freshly brewed</h3><p>Small-batch beans, ground to order.</p></li>
+            <li><h3>Fresh from the kitchen</h3><p>Bakes, sandwiches and breakfasts made daily.</p></li>
+            <li><h3>Cosy atmosphere</h3><p>Soft light, warm wood and room to linger.</p></li>
+            <li><h3>Friendly service</h3><p>A team that remembers your usual order.</p></li>
+          </ul>
+          <p>Whether you are catching up with friends, studying for exams or taking a laptop break between meetings, there is a table here for you.</p>
+        </div>
+      </div>
+    </section>
+
+    <!-- ============ MENU ============ -->
+    <section class="menu" id="menu">
+      <div class="container">
+        <div class="section-head">
+          <h2>Our Menu</h2>
+          <p>45 items, all prices in Indian Rupees (₹). Pick a size or add-on on each card.</p>
+        </div>
+
+        <div class="menu-controls">
+          <input type="search" id="menuSearch" placeholder="Search the menu (e.g. latte, cake)" aria-label="Search menu items">
+          <div class="filters" id="menuFilters">
+            <button class="filter-btn active" data-filter="all">All</button>
+            <button class="filter-btn" data-filter="hot">Hot Coffee</button>
+            <button class="filter-btn" data-filter="cold">Cold Coffee &amp; Iced</button>
+            <button class="filter-btn" data-filter="tea">Tea &amp; Others</button>
+            <button class="filter-btn" data-filter="bakery">Bakery &amp; Desserts</button>
+            <button class="filter-btn" data-filter="snacks">Snacks &amp; Savoury</button>
+            <button class="filter-btn" data-filter="meals">Breakfast &amp; Meals</button>
+          </div>
+        </div>
+
+        <div class="menu-grid" id="menuGrid"></div>
+        <p class="empty-msg" id="menuEmpty" hidden>No items match your search. Try another word or choose "All".</p>
+      </div>
+    </section>
+
+    <!-- ============ SPECIALS ============ -->
+    <section class="specials" id="specials">
+      <div class="container">
+        <div class="section-head">
+          <h2>Today's Specials</h2>
+          <p>Three favourites our regulars keep coming back for.</p>
+        </div>
+        <div class="specials-grid">
+          <article class="special-card">
+            <span class="badge">Customer Favourite</span>
+            <img src="https://images.unsplash.com/photo-1572490122747-3968b75cc699?auto=format&fit=crop&w=800&q=75" alt="Caramel frappe topped with cream and caramel drizzle">
+            <div class="special-body">
+              <h3>Caramel Frappe</h3>
+              <p>Espresso blended with ice and buttery caramel, finished with whipped cream.</p>
+              <button class="btn btn-light btn-sm" data-special="Caramel Frappe">Add to Cart</button>
+            </div>
+          </article>
+          <article class="special-card">
+            <span class="badge">Baked This Morning</span>
+            <img src="https://images.unsplash.com/photo-1530610476181-d83430b64dcd?auto=format&fit=crop&w=800&q=75" alt="Golden chocolate croissant">
+            <div class="special-body">
+              <h3>Chocolate Croissant</h3>
+              <p>Flaky, buttery layers wrapped around dark chocolate. Best eaten warm.</p>
+              <button class="btn btn-light btn-sm" data-special="Chocolate Croissant">Add to Cart</button>
+            </div>
+          </article>
+          <article class="special-card">
+            <span class="badge">Seasonal Pick</span>
+            <img src="https://images.unsplash.com/photo-1536256263959-770b48d82b0a?auto=format&fit=crop&w=800&q=75" alt="Iced matcha latte in a tall glass">
+            <div class="special-body">
+              <h3>Iced Matcha Latte</h3>
+              <p>Ceremonial-style matcha whisked and poured over milk and ice.</p>
+              <button class="btn btn-light btn-sm" data-special="Iced Matcha Latte">Add to Cart</button>
+            </div>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <!-- ============ GALLERY ============ -->
+    <section class="gallery" id="gallery">
+      <div class="container">
+        <div class="section-head">
+          <h2>Life at Roast &amp; Rye</h2>
+          <p>A glimpse of the room, the bar and the plates.</p>
+        </div>
+        <div class="gallery-grid">
+          <figure><img src="https://images.unsplash.com/photo-1521017432531-fbd92d768814?auto=format&fit=crop&w=800&q=70" alt="Café interior with tables and warm lighting" loading="lazy"></figure>
+          <figure><img src="https://images.unsplash.com/photo-1442512595331-e89e73853f31?auto=format&fit=crop&w=800&q=70" alt="Barista preparing coffee at the bar" loading="lazy"></figure>
+          <figure><img src="https://images.unsplash.com/photo-1572442388796-11668a67e53d?auto=format&fit=crop&w=800&q=70" alt="Cappuccino with latte art" loading="lazy"></figure>
+          <figure><img src="https://images.unsplash.com/photo-1555507036-ab1f4038808a?auto=format&fit=crop&w=800&q=70" alt="Freshly baked croissants" loading="lazy"></figure>
+          <figure><img src="https://images.unsplash.com/photo-1567620905732-2d1ec7ab7445?auto=format&fit=crop&w=800&q=70" alt="Pancakes and waffles with fruit" loading="lazy"></figure>
+          <figure><img src="https://images.unsplash.com/photo-1529156069898-49953e39b3ac?auto=format&fit=crop&w=800&q=70" alt="Friends enjoying coffee together" loading="lazy"></figure>
+        </div>
+      </div>
+    </section>
+
+    <!-- ============ REVIEWS ============ -->
+    <section class="reviews" id="reviews">
+      <div class="container">
+        <div class="section-head">
+          <h2>What Guests Say</h2>
+          <p>Sample reviews written for this demo website.</p>
+        </div>
+        <div class="reviews-grid">
+          <blockquote class="review">
+            <div class="stars" aria-label="5 out of 5 stars">★★★★★</div>
+            <p>The cappuccino is perfectly balanced and the croissants are still warm at 9 AM. My go-to spot for Sunday catch-ups.</p>
+            <footer>Ananya Sen</footer>
+          </blockquote>
+          <blockquote class="review">
+            <div class="stars" aria-label="5 out of 5 stars">★★★★★</div>
+            <p>Great Wi-Fi, quiet corners and a brilliant cold brew. I finished half my assignments here last semester.</p>
+            <footer>Rohan Mukherjee</footer>
+          </blockquote>
+          <blockquote class="review">
+            <div class="stars" aria-label="4 out of 5 stars">★★★★☆</div>
+            <p>The paneer tikka sandwich and chocolate lava cake were fantastic. Friendly staff and a lovely cosy vibe.</p>
+            <footer>Priya Banerjee</footer>
+          </blockquote>
+        </div>
+      </div>
+    </section>
+
+    <!-- ============ CONTACT ============ -->
+    <section class="contact" id="contact">
+      <div class="container contact-grid">
+        <div>
+          <h2>Visit us</h2>
+          <p class="note">This is a demo project. The details below are sample information, not a real business.</p>
+          <ul class="contact-list">
+            <li><strong>Address</strong>12 Sample Lane, Park Street Area, Kolkata 700016 (sample address)</li>
+            <li><strong>Opening hours</strong>Mon–Fri 8:00 AM – 10:30 PM<br>Sat–Sun 8:00 AM – 11:30 PM</li>
+            <li><strong>Phone</strong>+91 00000 00000 (sample number)</li>
+            <li><strong>Email</strong>hello@roastandrye.example (sample email)</li>
+            <li><strong>Instagram</strong><a href="https://www.instagram.com/" target="_blank" rel="noopener">@roastandrye (placeholder link)</a></li>
+          </ul>
+        </div>
+        <div class="map-placeholder" role="img" aria-label="Google Maps placeholder">
+          <p>Google Maps placeholder<br><small>Paste your Google Maps embed &lt;iframe&gt; here</small></p>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <!-- ============ FOOTER ============ -->
+  <footer class="site-footer">
+    <div class="container footer-grid">
+      <div>
+        <a href="#home" class="logo">Roast &amp; Rye</a>
+        <p>Coffee, Comfort &amp; Conversations.</p>
+      </div>
+      <ul class="footer-links">
+        <li><a href="#home">Home</a></li>
+        <li><a href="#story">Our Story</a></li>
+        <li><a href="#menu">Menu</a></li>
+        <li><a href="#specials">Specials</a></li>
+        <li><a href="#gallery">Gallery</a></li>
+        <li><a href="#contact">Contact</a></li>
+      </ul>
+    </div>
+    <p class="copyright">© 2026 Roast &amp; Rye. A fictional café created as a portfolio project.</p>
+  </footer>
+
+  <!-- ============ CART DRAWER ============ -->
+  <div class="overlay" id="overlay"></div>
+  <aside class="cart-drawer" id="cartDrawer" aria-label="Shopping cart" aria-hidden="true">
+    <div class="cart-head">
+      <h2>Your Cart</h2>
+      <button class="icon-btn" id="closeCart" aria-label="Close cart">✕</button>
+    </div>
+    <ul class="cart-items" id="cartItems"></ul>
+    <div class="cart-foot" id="cartFoot">
+      <div class="row"><span>Subtotal</span><span id="cartSubtotal">₹0</span></div>
+      <div class="row"><span>GST (5%)</span><span id="cartTax">₹0</span></div>
+      <div class="row total"><span>Total</span><span id="cartTotal">₹0</span></div>
+      <button class="btn btn-primary btn-block" id="checkoutBtn">Proceed to Checkout</button>
+      <button class="btn btn-outline btn-block" id="clearCart">Clear Cart</button>
+      <p class="note">Checkout is a demo: no real payment is taken.</p>
+    </div>
+  </aside>
+
+  <!-- ============ CHECKOUT MODAL (demo payment) ============ -->
+  <div class="modal" id="checkoutModal" hidden>
+    <div class="modal-box" role="dialog" aria-modal="true" aria-labelledby="checkoutTitle">
+      <button class="icon-btn modal-close" id="closeCheckout" aria-label="Close checkout">✕</button>
+
+      <form id="checkoutForm" novalidate>
+        <h2 id="checkoutTitle">Checkout</h2>
+        <p class="note demo-note">Demo payment only. No money is charged and no card details are collected.</p>
+
+        <label>Name
+          <input type="text" id="coName" autocomplete="name" placeholder="Your name">
+        </label>
+        <label>Mobile number
+          <input type="tel" id="coPhone" inputmode="numeric" maxlength="10" autocomplete="tel" placeholder="10-digit number">
+        </label>
+
+        <fieldset>
+          <legend>Order type</legend>
+          <label class="choice"><input type="radio" name="orderType" value="Dine-in" checked> Dine-in</label>
+          <label class="choice"><input type="radio" name="orderType" value="Pickup"> Pickup</label>
+        </fieldset>
+
+        <fieldset>
+          <legend>Payment method</legend>
+          <label class="choice"><input type="radio" name="payMethod" value="counter" checked> Pay at counter</label>
+          <label class="choice"><input type="radio" name="payMethod" value="upi"> UPI (demo)</label>
+          <label class="choice"><input type="radio" name="payMethod" value="card"> Card (demo)</label>
+        </fieldset>
+
+        <label id="upiRow" hidden>UPI ID
+          <input type="text" id="coUpi" placeholder="name@bank" autocomplete="off">
+        </label>
+
+        <p class="form-error" id="coError" role="alert"></p>
+        <button type="submit" class="btn btn-primary btn-block" id="payBtn">Place Order</button>
+      </form>
+
+      <div class="order-done" id="orderDone" hidden>
+        <h2>Order confirmed</h2>
+        <p>Thank you, <strong id="doneName"></strong>. Your order number is <strong id="doneId"></strong>.</p>
+        <p id="doneSummary" class="note"></p>
+        <button class="btn btn-primary btn-block" id="doneClose">Back to Menu</button>
+      </div>
+    </div>
+  </div>
+
+  <div class="toast" id="toast" role="status"></div>
+
+  <script src="cafe.js"></script>
+</body>
+</html>
